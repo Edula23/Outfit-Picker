@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function(){
    // Manual matches: map image src to array of matching image srcs
    const matches = {
        // Link the first pants image to two others as an example
-       'images/Suri/1.jpg': ['images/Shirts/1.jpg','images/Shirts/5.jpg'  ],
-       'images/Suri/2.jpg': ['images/Sweaters/4.jpg','images/Shirts/4.jpg','images/Sweaters/2.jpg'  ],
-       'images/Suri/3.jpg': ['images/Shirts/1.jpg','images/Shirts/2.jpg','images/Shirts/3.jpg','images/Shirts/4.jpg','images/Shirts/5.jpg','images/Shirts/6.jpg','images/Shirts/7.jpg'  ],
-       'images/Suri/4.jpg': ['images/Shirts/4.jpg','images/Shirts/6.jpg','images/Sweaters/2.jpg','images/Sweaters/4.jpg'  ],
-       'images/Suri/5.jpg': ['images/Shirts/1.jpg','images/Shirts/2.jpg','images/Shirts/4.jpg','images/Shirts/5.jpg','images/Shirts/6.jpg','images/Shirts/7.jpg'  ],
-       'images/Shirts/1.jpg': ['images/Suri/1.jpg','images/Suri/3.jpg','images/Suri/5.jpg'],
-       'images/Shirts/2.jpg': ['images/Suri/3.jpg','images/Suri/5.jpg']
+       'images/Suri/1.png': ['images/Shirts/1.png','images/Shirts/5.png'  ],
+       'images/Suri/2.png': ['images/Sweaters/4.png','images/Shirts/4.png','images/Sweaters/2.png'  ],
+       'images/Suri/3.png': ['images/Shirts/1.png','images/Shirts/2.png','images/Shirts/3.png','images/Shirts/4.png','images/Shirts/5.png','images/Shirts/6.png','images/Shirts/7.png'  ],
+       'images/Suri/4.png': ['images/Shirts/4.png','images/Shirts/6.png','images/Sweaters/2.png','images/Sweaters/4.png'  ],
+       'images/Suri/5.png': ['images/Shirts/1.png','images/Shirts/2.png','images/Shirts/4.png','images/Shirts/5.png','images/Shirts/6.png','images/Shirts/7.png'  ],
+       'images/Shirts/1.png': ['images/Suri/1.png','images/Suri/3.png','images/Suri/5.png'],
+       'images/Shirts/2.png': ['images/Suri/3.png','images/Suri/5.png']
 
 
        // Add more manual matches as needed

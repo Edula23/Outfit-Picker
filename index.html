@@ -3,107 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outfit Picker</title>
+    <title>Clothing Matcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>My Outfits</h1>
-        <div class="buttons">
-            <button class="filter-button active" data-filter="all">All</button>
-            <button class="filter-button" data-filter="pants">Pants</button>
-            <button class="filter-button" data-filter="t-shirts">T-Shirts</button>
-            <button class="filter-button" data-filter="jackets">Jackets</button>
-            <button class="filter-button" data-filter="sweaters">Sweaters</button>
-        </div> 
-        <!-- All -->
-        <div class="clothes">
-        <!-- Pants -->
-            <div class="cloth" data-category="pants">
-                <img src="images/Suri/1.png" alt="Pants 1">
-                <div class="caption">Modern House</div>               
-            </div>
-            <div class="cloth" data-category="pants">
-                <img src="images/Suri/2.png" alt="Pants 2">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="pants">
-                <img src="images/Suri/3.png" alt="Pants 3">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="pants">
-                <img src="images/Suri/4.png" alt="Pants 4">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="pants">
-                <img src="images/Suri/5.png" alt="Pants 5">
-                <div class="caption">Modern House</div>                
-            </div>
-        <!-- T-shirts -->
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/1.png" alt="T-shirt 1">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/2.png" alt="T-shirt 2">
-               <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/3.png" alt="T-shirt 3">
-               <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/4.png" alt="T-shirt 4">
-               <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/5.png" alt="T-shirt 5">
-               <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/6.png" alt="T-shirt 6">
-               <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="t-shirts">
-                <img src="images/Shirts/7.png" alt="T-shirt 7">
-               <div class="caption">Modern House</div>                
-            </div>
-        <!-- Jackets -->
-            <div class="cloth" data-category="jackets">
-                <img src="images/jackets1.png" alt="Jacket 1">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="jackets">
-                <img src="images/jackets2.png" alt="Jacket 2">
-                <div class="caption">Modern House</div>                
-            </div>
-        <!-- Sweaters -->
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/1.png" alt="Sweater 1">
-                <div class="caption">Modern House</div>                
-            </div>
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/2.png" alt="Sweater 2">
-                <div class="caption">Modern House</div>               
-            </div>
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/3.png" alt="Sweater 3">
-                <div class="caption">Modern House</div>               
-            </div>
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/4.png" alt="Sweater 4">
-                <div class="caption">Modern House</div>               
-            </div>
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/5.png" alt="Sweater 5">
-                <div class="caption">Modern House</div>               
-            </div>
-            <div class="cloth" data-category="sweaters">
-                <img src="images/Sweaters/6.png" alt="Sweater 6">
-                <div class="caption">Modern House</div>               
-            </div>
+    <header>
+        <h1>Styled Outfit Matcher</h1>
+        <p>Click on any clothing item to see matching outfits</p>
+    </header>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="shirts">Shirts</button>
+        <button class="filter-btn" data-category="pants">Pants</button>
+        <button class="filter-btn" data-category="jackets">Jackets</button>
+        <button class="filter-btn" data-category="sweaters">Sweaters</button>
+    </div>
+
+    <div class="clothing-grid" id="clothingGrid">
+        <!-- Clothing items will be populated by JavaScript -->
+    </div>
+
+    <div class="matching-section" id="matchingSection" style="display: none;">
+        <h2>Matches Well With</h2>
+        <div class="matching-items" id="matchingItems">
+            <!-- Matching items will be populated by JavaScript -->
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+

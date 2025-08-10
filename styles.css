@@ -1,124 +1,144 @@
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 
-}
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-body{
-    background-color: #0c004e;
-    padding: 20px;
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
 
-}
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-.container{
-    max-width: 1200px;
-    margin-inline: auto;
-}
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
 
-h1{
-     text-align: center;
-     margin-bottom: 30px;
-     color: #2acd0d;
-        font-size: 24px;
-}
+        /* Category Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-.filter-button{
-    border: none;
-    background-color: #110070 ;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    text-transform: capitalize;
-    transition: background-color 0.3s ease;
-    
-}
-.filter-button:hover{
-    background-color: #19fb00;
-}
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+        }
 
-.filter-button.active{
-    background-color: #2200e0;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
+        .filter-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
 
-.clothes{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr ) ;
-    gap: 20px;
-}
+        .filter-btn.active {
+            background-color: #2c3e50;
+        }
 
-.cloth{
-    position: relative;
-    aspect-ratio: 4/3 ;   
-    overflow: hidden; 
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease ;
-}
-.cloth:hover{
-    transform: translateY(-5px);
-}
+        /* Clothing Grid */
+        .clothing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
 
-.cloth img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block ;
-}
+        .clothing-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
 
-.cloth .caption{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 14px;
-}
-.hide{
-    display: none;
-}
+        .clothing-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
-/* Responsive Styles */
-@media screen and (max-width: 992px) {
-    .clothes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr ) ;
-    gap: 20px;
- }
+        .clothing-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
 
-}
-@media screen and (max-width: 768px) {
-    .clothes{
-    grid-template-columns: repeat(2, 1fr ) ; 
- }
+        .clothing-info {
+            padding: 15px;
+        }
 
-}
-@media screen and (max-width: 480px) {
-    .clothes{
-    grid-template-columns: 1fr  ; 
- }
-    .filter-button{
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-    h1{
-        font-size: 13px;
-    }
-    .cloth.caption{
-         padding: 3px;
-         font-size: 10px;
-    }
+        .clothing-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
 
-}
+        .clothing-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Matching Section */
+        .matching-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .matching-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .matching-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .clothing-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .filter-buttons {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clothing-grid {
+                grid-template-columns: 1fr;
+            }
+        }

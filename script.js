@@ -6,7 +6,7 @@
                 id: 1,
                 name: "Blue Denim Jacket",
                 category: "jackets",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a1eae213-e216-4a28-a528-7edda898e34b.png",
+                img: "Images/Shirts/1.png",
                 matches: [2, 3, 7, 10] // matches with white shirt, black pants, etc.
             },
             // White Oxford Shirt
@@ -14,7 +14,7 @@
                 id: 2,
                 name: "White Oxford Shirt",
                 category: "shirts",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a3ab85fb-265a-4ed8-bbf3-acf40a422332.png",
+                img: "Images/Shirts/2.png",
                 matches: [1, 4, 6, 9] // matches with jackets, sweaters, etc.
             },
             // Black Slim Fit Pants
@@ -22,7 +22,7 @@
                 id: 3,
                 name: "Black Slim Fit Pants",
                 category: "pants",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/771f9347-246c-431f-af3c-cb4b58f6a553.png",
+                img: "Images/Shirts/3.png",
                 matches: [1, 2, 5, 8] // matches with jackets, shirts, etc.
             },
             // Gray Cashmere Sweater
@@ -30,7 +30,7 @@
                 id: 4,
                 name: "Gray Cashmere Sweater",
                 category: "sweaters",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/025c2e4d-225a-4a75-849f-e4a1ee34a5e9.png",
+                img: "Images/Shirts/4.png",
                 matches: [2, 3, 6, 10] // matches with shirts, pants, etc.
             },
             // Tan Chinos
@@ -38,7 +38,7 @@
                 id: 5,
                 name: "Tan Chinos",
                 category: "pants",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c7a886f2-a467-4021-a753-6c78ca76f359.png",
+                img: "Images/Shirts/5.png",
                 matches: [2, 4, 7, 9] // matches with shirts, sweaters, etc.
             },
             // Navy Blue Blazer
@@ -46,7 +46,7 @@
                 id: 6,
                 name: "Navy Blue Blazer",
                 category: "jackets",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d5a73816-c181-403e-8875-a61bb5300286.png",
+                img: "Images/Shirts/6.png",
                 matches: [2, 3, 4, 8] // matches with shirts, pants, etc.
             },
             // Striped Button-Down Shirt
@@ -54,7 +54,7 @@
                 id: 7,
                 name: "Striped Button-Down Shirt",
                 category: "shirts",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a26ba465-4cd9-4f99-b273-8762ac27b8f2.png",
+                img: "Images/Shirts/7.png",
                 matches: [1, 5, 9, 10] // matches with jackets, pants, etc.
             },
             // Dark Wash Jeans
@@ -62,7 +62,7 @@
                 id: 8,
                 name: "Dark Wash Jeans",
                 category: "pants",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c54bcf5e-2041-4d57-a9e3-24dbc9f91fad.png",
+                img: "Images/Suri/1.png",
                 matches: [1, 2, 6, 10] // matches with jackets, shirts, etc.
             },
             // Cream Cable Knit Sweater
@@ -70,7 +70,7 @@
                 id: 9,
                 name: "Cream Cable Knit Sweater",
                 category: "sweaters",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6b7669e8-c615-4d5d-aa4d-ac6d3ac6ff9a.png",
+                img: "Images/Suri/2.png",
                 matches: [2, 5, 7, 8] // matches with shirts, pants, etc.
             },
             // White T-Shirt
@@ -78,7 +78,63 @@
                 id: 10,
                 name: "White T-Shirt",
                 category: "shirts",
-                img: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bcb2bf9-5b55-4793-9d30-1f70ced47ff7.png",
+                img: "Images/Suri/3.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 11,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Suri/4.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 12,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Suri/5.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 13,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/1.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 14,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/2.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 15,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/3.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 16,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/4.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 17,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/5.png",
+                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 18,
+                name: "White T-Shirt",
+                category: "shirts",
+                img: "Images/Sweaters/6.png",
                 matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
             }
         ];

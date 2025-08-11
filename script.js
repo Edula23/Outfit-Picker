@@ -1,58 +1,217 @@
-document.addEventListener('DOMContentLoaded', function(){    
-   const filterButtons = document.querySelectorAll('.filter-button');
-   const clothes = document.querySelectorAll('.cloth');
-   // Manual matches: map image src to array of matching image srcs
-   const matches = {
-       // Link the first pants image to two others as an example
-       'images/Suri/1.png': ['images/Shirts/1.png','images/Shirts/5.png'  ],
-       'images/Suri/2.png': ['images/Sweaters/4.png','images/Shirts/4.png','images/Sweaters/2.png'  ],
-       'images/Suri/3.png': ['images/Shirts/1.png','images/Shirts/2.png','images/Shirts/3.png','images/Shirts/4.png','images/Shirts/5.png','images/Shirts/6.png','images/Shirts/7.png'  ],
-       'images/Suri/4.png': ['images/Shirts/4.png','images/Shirts/6.png','images/Sweaters/2.png','images/Sweaters/4.png'  ],
-       'images/Suri/5.png': ['images/Shirts/1.png','images/Shirts/2.png','images/Shirts/4.png','images/Shirts/5.png','images/Shirts/6.png','images/Shirts/7.png'  ],
-       'images/Shirts/1.png': ['images/Suri/1.png','images/Suri/3.png','images/Suri/5.png'],
-       'images/Shirts/2.png': ['images/Suri/3.png','images/Suri/5.png']
 
+        // Clothing database - manually curated matches
+        const clothingDatabase = [
+            // Blue Denim Jacket
+            {
+                id: 1,
+                name: "Blue Denim Jacket",
+                category: "shirts",
+                img: "Images/Shirts/1.png",
+                matches: [1, 2, 3, 7, 10] // matches with white shirt, black pants, etc.
+            },
+            // White Oxford Shirt
+            {
+                id: 2,
+                name: "White Oxford Shirt",
+                category: "shirts",
+                img: "Images/Shirts/2.png",
+                matches: [2, 1, 4, 6, 9] // matches with jackets, sweaters, etc.
+            },
+            // Black Slim Fit Pants
+            {
+                id: 3,
+                name: "Black Slim Fit Pants",
+                category: "shirts",
+                img: "Images/Shirts/3.png",
+                matches: [3, 1, 2, 5, 8] // matches with jackets, shirts, etc.
+            },
+            // Gray Cashmere Sweater
+            {
+                id: 4,
+                name: "Gray Cashmere Sweater",
+                category: "shirts",
+                img: "Images/Shirts/4.png",
+                matches: [4, 2, 3, 6, 10] // matches with shirts, pants, etc.
+            },
+            // Tan Chinos
+            {
+                id: 5,
+                name: "Tan Chinos",
+                category: "shirts",
+                img: "Images/Shirts/5.png",
+                matches: [5, 2, 4, 7, 9] // matches with shirts, sweaters, etc.
+            },
+            // Navy Blue Blazer
+            {
+                id: 6,
+                name: "Navy Blue Blazer",
+                category: "shirts",
+                img: "Images/Shirts/6.png",
+                matches: [6, 2, 3, 4, 8] // matches with shirts, pants, etc.
+            },
+            // Striped Button-Down Shirt
+            {
+                id: 7,
+                name: "Striped Button-Down Shirt",
+                category: "shirts",
+                img: "Images/Shirts/7.png",
+                matches: [7, 1, 5, 9, 10] // matches with jackets, pants, etc.
+            },
+            // Dark Wash Jeans
+            {
+                id: 8,
+                name: "Dark Wash Jeans",
+                category: "pants",
+                img: "Images/Suri/1.png",
+                matches: [8, 7, 2, 6, 10] // matches with jackets, shirts, etc.
+            },
+            // Cream Cable Knit Sweater
+            {
+                id: 9,
+                name: "Cream Cable Knit Sweater",
+                category: "pants",
+                img: "Images/Suri/2.png",
+                matches: [9, 2, 5, 7, 8] // matches with shirts, pants, etc.
+            },
+            // White T-Shirt
+            {
+                id: 10,
+                name: "White T-Shirt",
+                category: "pants",
+                img: "Images/Suri/3.png",
+                matches: [10, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 11,
+                name: "White T-Shirt",
+                category: "pants",
+                img: "Images/Suri/4.png",
+                matches: [11, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 12,
+                name: "White T-Shirt",
+                category: "pants",
+                img: "Images/Suri/5.png",
+                matches: [12, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 13,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/1.png",
+                matches: [13, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 14,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/2.png",
+                matches: [14, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 15,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/3.png",
+                matches: [15, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 16,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/4.png",
+                matches: [16, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 17,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/5.png",
+                matches: [17, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            },
+            {
+                id: 18,
+                name: "White T-Shirt",
+                category: "sweaters",
+                img: "Images/Sweaters/6.png",
+                matches: [18, 1, 3, 4, 8] // matches with jackets, pants, etc.
+            }
+        ];
 
-       // Add more manual matches as needed
-   };
-// Add click event to the filter buttons
-    filterButtons.forEach(button =>{
-        button.addEventListener('click', function(){
-            filterButtons.forEach(btn=>btn.classList.remove('active'));
-            this.classList.add('active');
-            const filterValue = this.getAttribute('data-filter');
-            clothes.forEach(item=>{
-                const category = item.getAttribute('data-category');
-                if(filterValue === 'all' || filterValue === category){
-                    item.classList.remove('hide');
-                } else {
-                    item.classList.add('hide');
-                }
-            })
-        })
-    });
+        // DOM Elements
+        const clothingGrid = document.getElementById('clothingGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const matchingSection = document.getElementById('matchingSection');
+        const matchingItems = document.getElementById('matchingItems');
 
-    // Add click event to each cloth image for manual matching
-    clothes.forEach(item => {
-        const img = item.querySelector('img');
-        if (img) {
-            img.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const src = img.getAttribute('src');
-                if (matches[src]) {
-                    clothes.forEach(cloth => {
-                        const clothImg = cloth.querySelector('img');
-                        if (clothImg) {
-                            if (src === clothImg.getAttribute('src') || matches[src].includes(clothImg.getAttribute('src'))) {
-                                cloth.classList.remove('hide');
-                            } else {
-                                cloth.classList.add('hide');
-                            }
-                        }
-                    });
-                }
+        // Function to render clothing items
+        function renderClothingItems(category = 'all') {
+            clothingGrid.innerHTML = '';
+            
+            const filteredItems = category === 'all' 
+                ? clothingDatabase 
+                : clothingDatabase.filter(item => item.category === category);
+            
+            filteredItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'clothing-item';
+                itemElement.dataset.id = item.id;
+                
+                itemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" />
+                    <div class="clothing-info">
+                        <h3>${item.name}</h3>
+                        <p>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</p>
+                    </div>
+                `;
+                
+                itemElement.addEventListener('click', () => showMatches(item));
+                clothingGrid.appendChild(itemElement);
             });
         }
-    });
-})
- 
+
+        // Function to show matching items
+        function showMatches(selectedItem) {
+            matchingSection.style.display = 'block';    
+            matchingItems.innerHTML = '';
+            
+            // Find matching items
+            const matches = selectedItem.matches.map(matchId => 
+                clothingDatabase.find(item => item.id === matchId)
+            );
+            
+            matches.forEach(match => {
+                const matchElement = document.createElement('div');
+                matchElement.className = 'clothing-item';
+                
+                matchElement.innerHTML = `
+                    <img src="${match.img}" alt="${match.name}" />
+                    <div class="clothing-info">
+                        <h3>${match.name}</h3>
+                        <p>${match.category.charAt(0).toUpperCase() + match.category.slice(1)}</p>
+                    </div>
+                `;
+                
+                matchingItems.appendChild(matchElement); 
+                matchElement.addEventListener('click', () => showMatches(match));
+            });            
+            // Scroll to matching section
+            matchingSection.scrollIntoView({ behavior: 'smooth' });
+           
+        }
+
+        // Event listener for filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                renderClothingItems(button.dataset.category);
+                matchingSection.style.display = 'none'; // Hide matching section on filter change
+            });
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClothingItems();
+        });

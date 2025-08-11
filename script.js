@@ -7,7 +7,7 @@
                 name: "Blue Denim Jacket",
                 category: "shirts",
                 img: "Images/Shirts/1.png",
-                matches: [2, 3, 7, 10] // matches with white shirt, black pants, etc.
+                matches: [1, 2, 3, 7, 10] // matches with white shirt, black pants, etc.
             },
             // White Oxford Shirt
             {
@@ -15,7 +15,7 @@
                 name: "White Oxford Shirt",
                 category: "shirts",
                 img: "Images/Shirts/2.png",
-                matches: [1, 4, 6, 9] // matches with jackets, sweaters, etc.
+                matches: [2, 1, 4, 6, 9] // matches with jackets, sweaters, etc.
             },
             // Black Slim Fit Pants
             {
@@ -23,7 +23,7 @@
                 name: "Black Slim Fit Pants",
                 category: "shirts",
                 img: "Images/Shirts/3.png",
-                matches: [1, 2, 5, 8] // matches with jackets, shirts, etc.
+                matches: [3, 1, 2, 5, 8] // matches with jackets, shirts, etc.
             },
             // Gray Cashmere Sweater
             {
@@ -31,7 +31,7 @@
                 name: "Gray Cashmere Sweater",
                 category: "shirts",
                 img: "Images/Shirts/4.png",
-                matches: [2, 3, 6, 10] // matches with shirts, pants, etc.
+                matches: [4, 2, 3, 6, 10] // matches with shirts, pants, etc.
             },
             // Tan Chinos
             {
@@ -39,7 +39,7 @@
                 name: "Tan Chinos",
                 category: "shirts",
                 img: "Images/Shirts/5.png",
-                matches: [2, 4, 7, 9] // matches with shirts, sweaters, etc.
+                matches: [5, 2, 4, 7, 9] // matches with shirts, sweaters, etc.
             },
             // Navy Blue Blazer
             {
@@ -47,7 +47,7 @@
                 name: "Navy Blue Blazer",
                 category: "shirts",
                 img: "Images/Shirts/6.png",
-                matches: [2, 3, 4, 8] // matches with shirts, pants, etc.
+                matches: [6, 2, 3, 4, 8] // matches with shirts, pants, etc.
             },
             // Striped Button-Down Shirt
             {
@@ -55,7 +55,7 @@
                 name: "Striped Button-Down Shirt",
                 category: "shirts",
                 img: "Images/Shirts/7.png",
-                matches: [1, 5, 9, 10] // matches with jackets, pants, etc.
+                matches: [7, 1, 5, 9, 10] // matches with jackets, pants, etc.
             },
             // Dark Wash Jeans
             {
@@ -63,7 +63,7 @@
                 name: "Dark Wash Jeans",
                 category: "pants",
                 img: "Images/Suri/1.png",
-                matches: [7, 2, 6, 10] // matches with jackets, shirts, etc.
+                matches: [8, 7, 2, 6, 10] // matches with jackets, shirts, etc.
             },
             // Cream Cable Knit Sweater
             {
@@ -71,7 +71,7 @@
                 name: "Cream Cable Knit Sweater",
                 category: "pants",
                 img: "Images/Suri/2.png",
-                matches: [2, 5, 7, 8] // matches with shirts, pants, etc.
+                matches: [9, 2, 5, 7, 8] // matches with shirts, pants, etc.
             },
             // White T-Shirt
             {
@@ -79,63 +79,63 @@
                 name: "White T-Shirt",
                 category: "pants",
                 img: "Images/Suri/3.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [10, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 11,
                 name: "White T-Shirt",
                 category: "pants",
                 img: "Images/Suri/4.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [11, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 12,
                 name: "White T-Shirt",
                 category: "pants",
                 img: "Images/Suri/5.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [12, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 13,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/1.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [13, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 14,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/2.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [14, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 15,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/3.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [15, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 16,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/4.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [16, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 17,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/5.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [17, 1, 3, 4, 8] // matches with jackets, pants, etc.
             },
             {
                 id: 18,
                 name: "White T-Shirt",
                 category: "sweaters",
                 img: "Images/Sweaters/6.png",
-                matches: [1, 3, 4, 8] // matches with jackets, pants, etc.
+                matches: [18, 1, 3, 4, 8] // matches with jackets, pants, etc.
             }
         ];
 
@@ -173,16 +173,7 @@
 
         // Function to show matching items
         function showMatches(selectedItem) {
-            matchingSection.style.display = 'block';
-            const selectedItemElement = document.createElement('div');
-                selectedItemElement.className = 'clothing-item';
-                selectedItemElement.innerHTML = `
-                    <img src="${selectedItem.img}" alt="${selectedItem.name}" />
-                    <div class="clothing-info">
-                        <h3>${selectedItem.name}</h3>
-                        <p>${selectedItem.category.charAt(0).toUpperCase() + selectedItem.category.slice(1)}</p>
-                    </div>
-                `;
+            matchingSection.style.display = 'block';    
             matchingItems.innerHTML = '';
             
             // Find matching items
@@ -202,14 +193,10 @@
                     </div>
                 `;
                 
-                matchingItems.appendChild(selectedItemElement);
                 matchingItems.appendChild(matchElement); 
                 matchElement.addEventListener('click', () => showMatches(match));
-            });
-
-            
+            });            
             // Scroll to matching section
-
             matchingSection.scrollIntoView({ behavior: 'smooth' });
            
         }

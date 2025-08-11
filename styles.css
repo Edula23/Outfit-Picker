@@ -9,7 +9,7 @@
 
         body {
             background-color: #0c004e;
-            color: #333;
+            color: #68b4ff;
             padding: 20px;
         }
 
@@ -22,7 +22,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #68b4ff;
         }
 
         /* Category Filter Buttons */
@@ -64,7 +64,7 @@
         }
 
         .clothing-item {
-            background-color: white;
+            background-color: #2a5077;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@
         .clothing-item img {
             width: 100%;
             height: 250px;
-            object-fit: cover;
+            object-fit: contain;
             border-bottom: 1px solid #eee;
         }
 
@@ -110,7 +110,7 @@
         .matching-section h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: #68b4ff;
             text-align: center;
         }
 

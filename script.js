@@ -220,6 +220,7 @@
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 renderClothingItems(button.dataset.category);
+                matchingSection.style.display = 'none'; // Hide matching section on filter change
             });
         });
 

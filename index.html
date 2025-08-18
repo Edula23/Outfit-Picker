@@ -7,11 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+<nav class="navbar">
+            <div class="logo">
+                <img src="Images/ClosetMatchLogo.png" alt="Logo" class="logo-image">
+            </div>
+            <ul class="nav-links">
+                <li class="nav active"><a href="#home">Home</a></li>
+                <li class="nav"><a href="#about">About</a></li>
+                <li class="nav"><a href="#contact">Contact</a></li>            
+                <li class="nav"><a href="#closet">Closet</a></li>            
+            </ul>
+            <button class="signUp">
+                Sign Up
+            </button>
+        </nav>
+     <div class="hero-section">  
+              
+        <h1 class="title">ClosetMatch</h1>
+        <div class="middleHero">
+        <div class="rightDescription">
+          <div class="avatars">
+            <img class="avatar" src="Images/avatar1.png" alt="Avatar 1">
+            <img class="avatar" src="Images/avatar2.png" alt="Avatar 2">
+            <img class="avatar" src="Images/avatar3.png" alt="Avatar 3">
+        </div>
+        <p class="description1">Lorem ipsum dolor sit amet consectetur. Amet in dictum odio magna ut feugiat. Bibendum hac facilisi feugiat pellentesque nisl eu fringilla mattis sem.</p>  
+        </div>
+        
+        <img src="Images/32.png" alt="Models" class="hero-image">
+        <div class="leftDescriptions">
+        <span class="hashtag">#Fashion</span>    
+        <p class="description2">Amet in dictum odio magna ut feugiat. Bibendum hac facilisi feugiat pellentesque nisl eu fringilla mattis sem.</p>
+        
+    </div> 
+    </div>
+    </div>
+    </div>
+
+    <div class="closet" id="closet">
     <header>
         <h1>Styled Outfit Matcher</h1>
         <p>Click on any clothing item to see matching outfits</p>
     </header>
-
     <div class="filter-buttons">
         <button class="filter-btn active" data-category="all">All</button>
         <button class="filter-btn" data-category="shirts">Shirts</button>
@@ -30,7 +68,7 @@
             <!-- Matching items will be populated by JavaScript -->
         </div>
     </div>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>

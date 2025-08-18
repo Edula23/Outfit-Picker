@@ -1,16 +1,134 @@
 
+       @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
         /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .logo{
+            align-items: center;
+        }
+        .signUp{
+            background: linear-gradient(45deg, #4FEDFF, #2A00FF, #4FEDFF);
+            width: 7rem;
+            height: 2.3rem;
+            border-radius: 50px;
+            border: none;
+            color: white;
+            font-weight: 500;
+        }
+        .logo-image{
+            width: 250px;
+            height: 30px;
+            left: 10px;
+            top: 60px;
         }
 
         body {
             background-color: #0c004e;
             color: #ffffff;
-            padding: 20px;
+            padding: 50px;
+            
+        }
+        .container{
+            min-height: 100vh;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px ;
+        }
+        .nav-links{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 50px;
+            font-size: 20px;
+            color: #4FEDFF ;
+            align-items: center;
+            position: relative;
+            left: -70px;
+        }
+        li{
+            list-style: none;
+            color: #4FEDFF ;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff ;
+        }
+        .hero-section{
+            
+            text-align: left;
+            padding: 0px 20px;
+            position: relative;
+        }
+        .middleHero{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: end;
+            justify-content: space-between;
+        }
+        .title {
+        top: 3rem;
+        position: relative;
+        text-align: center;
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: -5px;
+        font-family: "Lora", serif;
+        background: linear-gradient(90deg, #4FEDFF, #2A00FF, #4FEDFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}    
+.avatars{
+    position: relative;
+    bottom: 22.5rem;
+    left: 10rem;
+    display: flex;
+} 
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    margin-left: -15px;
+    border-radius: 50%;
+    border: 2px solid #4FEDFF;
+
+}
+.hero-image {
+    position: relative;
+    width: 20%; /* or a size that fits your design */
+    max-width: 600px;
+    border-radius: 0px;
+    margin: 20px 0;
+    bottom: 5rem;
+}
+        .description {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.hashtag {
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px 0;
+    color: lightgray;
+    bottom: 15rem;
+}
+        .description1{
+            position: relative;
+            bottom: 15rem;
+            width: 22rem;
+        }
+        .description2{
+            position: relative;
+            bottom: 10rem;
+            width: 22rem;
         }
 
         /* Header Styles */
@@ -20,8 +138,9 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
+            
             
         }
 

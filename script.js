@@ -140,6 +140,7 @@
         ];
 
         // DOM Elements
+        const navLinks = document.querySelectorAll('.nav a');
         const clothingGrid = document.getElementById('clothingGrid');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const matchingSection = document.getElementById('matchingSection');
@@ -210,8 +211,20 @@
                 matchingSection.style.display = 'none'; // Hide matching section on filter change
             });
         });
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+                const targetId = this.getAttribute('href').replace('#', '');
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            });
+        });
 
         // Initialize the page
         document.addEventListener('DOMContentLoaded', () => {
             renderClothingItems();
+
         });

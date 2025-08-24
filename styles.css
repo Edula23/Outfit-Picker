@@ -1,6 +1,7 @@
 
        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
         /* Reset and Base Styles */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -38,7 +39,7 @@
         body {
             background-color: #0c004e;
             color: #ffffff;
-            padding: 50px;
+            padding: 0px 50px 50px 50px;
             
         }
         .container{
@@ -49,7 +50,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0px ;
+            padding-right: 6rem ;
+            position: fixed;
+            background-color: #0c004e;
+            z-index: 1000;
+            padding-top: 2%;
+            padding-bottom: 2%;
         }
         .nav-links{
             display: flex;
@@ -69,11 +75,13 @@
         a{
             text-decoration: none;
             color: #ffffff ;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
         }
         .hero-section{
-            
+            padding-top: 4.5rem;
             text-align: left;
-            padding: 0px 20px;
+            /* padding: 0px 20px; */
             position: relative;
         }
         .middleHero{
@@ -123,6 +131,8 @@
         .description {
     font-size: 18px;
     margin: 20px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 100;
 }
 .hashtag {
     position: relative;
@@ -136,28 +146,43 @@
             position: relative;
             bottom: 15rem;
             width: 22rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 200;
         }
         .description2{
             position: relative;
             bottom: 10rem;
             width: 22rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 200;
         }
         .about{
             display: grid;
             width: 100%;
             grid-template-columns: 1fr 1fr;
-            align-items:center;
-            gap: 4rem;
+            align-items:start;
+            gap: 2rem;
             margin: 40px 0;
+        }
+        .about p{
+            margin: 6rem 0;
+            font-size: 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 200;
+        }
+        .about h2{
+            /* margin: 6rem 0; */
+            font-size: 40px;
         }
         .aboutImage{
             justify-self: end;
             width: 100%;
             height: auto;
-            
+            margin-right: 10%;
         }
         .aboutImage img{
             justify-self: end;
+
         }
 
         /* Header Styles */
@@ -269,6 +294,88 @@
             gap: 20px;
             justify-content: center;
         }
+
+        /* Footer Base */
+.footer {
+  background: transparent;
+  padding: 3rem 5%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Columns container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 2rem;
+}
+
+/* Logo + text */
+.footer .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Social icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #4FEDFF; /* Accent hover color */
+}
+
+/* Column headings */
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Links */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer ul li a:hover {
+  text-decoration: underline;
+  color: #2A00FF;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+/* Responsive */
+
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
@@ -389,6 +496,16 @@
                 max-width: 28rem;
             }
         }
+        @media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
         @keyframes gradientMove {
             0% {
                 background-position: 0% 0%;

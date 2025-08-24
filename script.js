@@ -222,12 +222,40 @@
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
+                    if(targetId !== 'home'){
+                        targetSection.style.marginTop = '150px';
+                    }
                 }
 
             });
         });
         button.addEventListener('click', () => {
-            document.getElementById('closet').scrollIntoView({ behavior: 'smooth' });
+            const destination = document.getElementById('closet')
+            if (destination) {
+                    destination.scrollIntoView({ behavior: 'smooth' });
+                }
+            destination.scrollIntoView({ behavior: 'smooth' });
+            
+            destination.style.marginTop = '150px';
+            let startY = null;
+            destination.addEventListener('mousedown', function(e) {                
+                startY = e.clientY;
+                });
+
+                destination.addEventListener('mouseup', function(e) {
+                if (startY !== null) {
+                    const endY = e.clientY;
+                    if (endY < startY) {
+                    // Mouse moved up
+                    destination.style.marginTop = '40px';
+                    } else {
+                    // Mouse moved down or stayed
+                    destination.style.marginTop = '150px';
+                    }
+                    startY = null; // Reset
+                }
+                });
+
         });
 
         // Initialize the page

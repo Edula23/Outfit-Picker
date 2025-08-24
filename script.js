@@ -141,10 +141,12 @@
 
         // DOM Elements
         const navLinks = document.querySelectorAll('.nav a');
+        const button = document.querySelector('.signUp');
         const clothingGrid = document.getElementById('clothingGrid');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const matchingSection = document.getElementById('matchingSection');
         const matchingItems = document.getElementById('matchingItems');
+
 
         // Function to render clothing items
         function renderClothingItems(category = 'all') {
@@ -218,9 +220,14 @@
                 link.classList.add('active');
                 const targetId = this.getAttribute('href').replace('#', '');
                 const targetSection = document.getElementById(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
 
             });
+        });
+        button.addEventListener('click', () => {
+            document.getElementById('closet').scrollIntoView({ behavior: 'smooth' });
         });
 
         // Initialize the page

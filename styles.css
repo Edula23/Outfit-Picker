@@ -7,17 +7,26 @@
             box-sizing: border-box;
             
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
         .logo{
             align-items: center;
         }
         .signUp{
-            background: linear-gradient(45deg, #4FEDFF, #2A00FF, #4FEDFF);
+            background: linear-gradient(100deg, #3d78ff, #4FEDFF, #2A00FF, #4FEDFF,#2A00FF, #3d78ff);
             width: 7rem;
             height: 2.3rem;
             border-radius: 50px;
             border: none;
             color: white;
             font-weight: 500;
+            cursor: pointer;
+            outline: none;
+            animation: gradientMove 6s ease infinite;
+            background-size: 900% 450%;
         }
         .logo-image{
             width: 250px;
@@ -78,11 +87,14 @@
         top: 3rem;
         position: relative;
         text-align: center;
-        font-size: 150px;
+        font-size: clamp(2.5rem, 12vw, 150px);
         font-weight: bold;
         letter-spacing: -5px;
         font-family: "Lora", serif;
-        background: linear-gradient(90deg, #4FEDFF, #2A00FF, #4FEDFF);
+        background: linear-gradient(100deg, #3d78ff, #4FEDFF, #2A00FF, #4FEDFF,#2A00FF, #3d78ff);
+        background-clip: text;
+        animation: gradientMove 6s ease infinite;
+        background-size: 900% 450%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }    
@@ -129,6 +141,23 @@
             position: relative;
             bottom: 10rem;
             width: 22rem;
+        }
+        .about{
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            align-items:center;
+            gap: 4rem;
+            margin: 40px 0;
+        }
+        .aboutImage{
+            justify-self: end;
+            width: 100%;
+            height: auto;
+            
+        }
+        .aboutImage img{
+            justify-self: end;
         }
 
         /* Header Styles */
@@ -260,5 +289,111 @@
         @media (max-width: 480px) {
             .clothing-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Additional responsive rules */
+        @media (max-width: 1200px) {
+            .nav-links {
+                gap: 30px;
+                left: 0;
+            }
+            .hero-image {
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            body {
+                padding: 30px;
+            }
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .logo-image {
+                max-width: 180px;
+                height: auto;
+            }
+            .nav-links {
+                left: 0;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .signUp {
+                width: 6.2rem;
+                height: 2.2rem;
+            }
+            .middleHero {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-image {
+                width: 60%;
+                bottom: 0;
+                margin: 10px auto 0;
+            }
+            .avatars {
+                bottom: 0;
+                left: 0;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .description1, .description2, .hashtag {
+                bottom: 0;
+                text-align: center;
+                margin: 10px auto 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                gap: 16px;
+            }
+            .hero-image {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-image {
+                max-width: 150px;
+            }
+            .signUp {
+                width: 5.5rem;
+                height: 2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            .hero-image {
+                width: 90%;
+            }
+            .avatars .avatar {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            .description1, .description2 {
+                width: 100%;
+                max-width: 28rem;
+            }
+        }
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: -200% 0%;
             }
         }
